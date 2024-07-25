@@ -21,7 +21,7 @@ public class AdminUsersTest extends Base{
 		String newUsernameSendkeys="Ramuram";
 		String newpasswordSendkeys="ramuadmin";
 		AdminUsersPage adminuserspage=new AdminUsersPage(driver);
-		adminuserspage.clickOnMoreInfoButton().clickOnNewButton().enterNewUsernameOnUsernameField(newUsernameSendkeys).enterPasswordOnPasswordField(newpasswordSendkeys).selectuserTypeFromDropDown(dropDownSelectValue).saveButtonToAddNewUser();
+		adminuserspage.clickOnMoreInfoButton().clickOnNewButton().enterNewUsernameOnUsernameField(newUsernameSendkeys).enterPasswordOnPasswordField(newpasswordSendkeys).selectuserTypeFromDropDown(dropDownSelectValue).saveButtonToAddNewUser().performingMouseActionToContextClick();
 		boolean issavebuttonisenabled=adminuserspage.verifySaveButtonIsEnabled();
         assertTrue(issavebuttonisenabled,"User is not able to clcik savebutton to add new users details");
         /*boolean alertMessageForNewUser=adminuserspage.verifyAlertMessageIsDisplayedPostAddingNewUser();

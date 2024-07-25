@@ -60,6 +60,12 @@ public class AdminUsersPage {
 		pageutility.selectValueUsingSelectByVisibleText(dropdownSelectUserType,VisibleText);
 		return this;
 	}
+	 public AdminUsersPage performingMouseActionToContextClick()
+	{
+		 PageUtility pageutility=new PageUtility();
+		 pageutility.mouseActionToContextClick(driver, newButton);
+		 return this;
+	} 
 	public AdminUsersPage saveButtonToAddNewUser()
 	{
 		savebuton.click();

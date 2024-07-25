@@ -2,15 +2,11 @@ package pages;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-
-import utilities.ActionUtility;
 import utilities.PageUtility;
 
 public class AdminUserSearchPage {
@@ -55,12 +51,7 @@ public WebDriver driver ;//can acces in multiple action methods //driver is clas
 		pageutility.selectValueUsingSelectByVisibleText(dropdownSelectUserType,VisibleText);
 		return this;
 	}
-	/*public AdminUserSearchPage performingMouseActionToContextClick(WebDriver element )
-	{
-		ActionUtility actionutility=new ActionUtility();
-		actionutility.mouseActionToContextClick(element);
-		return this;
-	}*/
+	
 	public AdminUserSearchPage clickOnSubmitSearchButton()
 	{
 		submitSearchButton.click();

@@ -2,12 +2,14 @@ package pages;
 
 import java.awt.AWTException;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.FileUtility;
+import utilities.PageUtility;
 
 public class SubCategoryPage {
 public WebDriver driver ;//can acces in multiple action methods //driver is class variable 
@@ -40,6 +42,12 @@ public WebDriver driver ;//can acces in multiple action methods //driver is clas
 		FileUtility fileutility=new FileUtility();
 		fileutility.fileUploadUsingSendkeys(chooseFile, filePathImage);
 		fileutility.fileUploadUsingRobotClass(filePathImage);
+		return this;
+	}
+	public SubCategoryPage scrollDownAdminUserSearchPage(int pixels)
+	{
+		PageUtility pageutility=new PageUtility();
+		pageutility.pageScrollDown((JavascriptExecutor) driver,pixels);
 		return this;
 	}
 	public SubCategoryPage clickOnUpdate()

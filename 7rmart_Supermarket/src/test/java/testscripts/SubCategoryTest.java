@@ -25,8 +25,7 @@ public class SubCategoryTest extends Base {
 		loginpage.enterUsernameOnUsernameField(expectedUsername).enterPasswordOnPasswordField(passwordSendkeys).clickOnSignButton();
 		SubCategoryPage subcategorypage=new SubCategoryPage(driver);
 		subcategorypage.clickOnMoreInfoButton().clickOnEditAction().fileUpload(filePathImage).clickOnUpdate();
-		 //subcategorypage.fileUploadUsingSendkeys();
-		 boolean fileIsUpLoaded=subcategorypage.verifyFileIsUploadedOrNot();
+ 		 boolean fileIsUpLoaded=subcategorypage.verifyFileIsUploadedOrNot();
  		 assertTrue(fileIsUpLoaded,"File is not uploaded");	
  		}
 	@Test
@@ -34,11 +33,12 @@ public class SubCategoryTest extends Base {
 	{
 		String expectedUsername="admin";
 		String passwordSendkeys="admin";
-		
+		int pixels=250;
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUsernameOnUsernameField(expectedUsername).enterPasswordOnPasswordField(passwordSendkeys).clickOnSignButton();
 
 		SubCategoryPage subcategorypage=new SubCategoryPage(driver);
-		subcategorypage.clickOnMoreInfoButton();
+		subcategorypage.clickOnMoreInfoButton().scrollDownAdminUserSearchPage(pixels);
+		
 }
 }
