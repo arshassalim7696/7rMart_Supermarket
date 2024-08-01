@@ -20,13 +20,13 @@ public WebDriver driver ;//can acces in multiple action methods //driver is clas
 	}
 	//Locators
 
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']")WebElement adminUsersmoreinfo;
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']")private WebElement adminUsersmoreinfo;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-primary']")WebElement searchButton;
-	@FindBy(xpath="//input[@id='un']")WebElement userNameSearch;
-	@FindBy(xpath="//select[@id='ut']")WebElement dropdownSelectUserType;
-	@FindBy(xpath="//button[@name='Search']")WebElement submitSearchButton;
-	@FindBy(xpath="//tbody//descendant::td[1]")List<WebElement> tdUserName;
-	@FindBy(xpath="//button[@name='Search']")WebElement resetButton;
+	@FindBy(xpath="//input[@id='un']")private WebElement userNameSearch;
+	@FindBy(xpath="//select[@id='ut']")private WebElement dropdownSelectUserType;
+	@FindBy(xpath="//button[@name='Search']")private WebElement submitSearchButton;
+	@FindBy(xpath="//tbody//descendant::td[1]")private List<WebElement> tdUserName;
+	@FindBy(xpath="//button[@name='Search']")private WebElement resetButton;
 
 
 	public AdminUserSearchPage clickOnMoreInfoButton()

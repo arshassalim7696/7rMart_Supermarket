@@ -21,10 +21,10 @@ public WebDriver driver ;//can acces in multiple action methods //driver is clas
 	 PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category']//child::i[@class='fas fa-arrow-circle-right']")WebElement subCategorymoreinfo;
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Subcategory/edit?edit=406&page_ad=1']")WebElement editAction;
-	@FindBy(xpath="//input[@id='main_img']")WebElement chooseFile;
-	@FindBy(xpath="//button[@name='update']")WebElement update;
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-sub-category']//child::i[@class='fas fa-arrow-circle-right']")private WebElement subCategorymoreinfo;
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/Subcategory/edit?edit=406&page_ad=1']")private WebElement editAction;
+	@FindBy(xpath="//input[@id='main_img']")private WebElement chooseFile;
+	@FindBy(xpath="//button[@name='update']")private WebElement update;
 
 
 	public SubCategoryPage clickOnMoreInfoButton()
@@ -40,10 +40,11 @@ public WebDriver driver ;//can acces in multiple action methods //driver is clas
 	public SubCategoryPage fileUpload(String filePathImage) throws AWTException
 	{
 		FileUtility fileutility=new FileUtility();
-		fileutility.fileUploadUsingSendkeys(chooseFile, filePathImage);
+		 fileutility.fileUploadUsingSendkeys(chooseFile, filePathImage);
 		fileutility.fileUploadUsingRobotClass(filePathImage);
 		return this;
 	}
+	
 	public SubCategoryPage scrollDownAdminUserSearchPage(int pixels)
 	{
 		PageUtility pageutility=new PageUtility();

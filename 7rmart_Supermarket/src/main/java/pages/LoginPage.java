@@ -15,11 +15,11 @@ public class LoginPage {
 	}
 	
 	//Locators
-	@FindBy(xpath="//input[@placeholder='Username']")WebElement username;
-	@FindBy(xpath="//input[@placeholder='Password']")WebElement password;
- 	@FindBy(xpath="//button[@class='btn btn-dark btn-block']")WebElement sigIn;
-	@FindBy(xpath="Home")WebElement home;
-	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")WebElement invalidCredentialAlert;
+	@FindBy(xpath="//input[@placeholder='Username']")private WebElement username;
+	@FindBy(xpath="//input[@placeholder='Password']")private WebElement password;
+ 	@FindBy(xpath="//button[@class='btn btn-dark btn-block']")private WebElement sigIn;
+	@FindBy(xpath="//a[text()='Home']")private WebElement home;
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")private WebElement invalidCredentialAlert;
 
 
 	//Action methods

@@ -21,14 +21,14 @@ public class AdminUsersPage {
 	//Locators
 	
 	
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']")WebElement adminUsersmoreinfo;
-	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")WebElement newButton;
-	@FindBy(xpath="//input[@id='username']")WebElement addNewUsername;
-	@FindBy(xpath="//input[@id='password']")WebElement addPassword;
-	@FindBy(xpath="//select[@id='user_type']")WebElement dropdownSelectUserType;
-	@FindBy(xpath="//button[@name='Create']")WebElement savebuton;
-	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alertMessageofNewUserAdded;
-	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")WebElement alertMessageofUserExist;
+	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin']")private WebElement adminUsersmoreinfo;
+	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger']")private WebElement newButton;
+	@FindBy(xpath="//input[@id='username']")private WebElement addNewUsername;
+	@FindBy(xpath="//input[@id='password']")private WebElement addPassword;
+	@FindBy(xpath="//select[@id='user_type']")private WebElement dropdownSelectUserType;
+	@FindBy(xpath="//button[@name='Create']")private WebElement savebuton;
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")private WebElement alertMessageofNewUserAdded;
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")private WebElement alertMessageofUserExist;
 
 	
 	
