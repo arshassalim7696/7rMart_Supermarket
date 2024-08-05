@@ -7,7 +7,7 @@
         <methods>
           <include name="initializeBrowser"/>
           <include name="verifyUsernavigateToSubCategoryMoreInfoToFileUpload"/>
-          <include name="driverQuit"/>
+          <include name="browserQuit"/>
         </methods>
       </class> <!-- testscripts.SubCategoryTest -->
     </classes>

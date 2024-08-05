@@ -20,7 +20,7 @@ public class LoginTest extends Base{
 		boolean homepagenavigated=loginpage.verifyHomePageNavigated();
         assertTrue(homepagenavigated ,"Home page is not navigated even if user enters correct username and password");
    }
-	@Test
+	@Test(description="This is for verifying loginpage with invalid username and valid password",groups= {"Regression"},retryAnalyzer=retry.Retry.class)
 	public void verifyUserisUnableToLoginWithInValidUserNameAndValidpassword()
 	{
 		String expectedUsername=XlUtility.getString(1, 2, "LoginPage");
@@ -30,7 +30,7 @@ public class LoginTest extends Base{
 		boolean isHomepagedisplayed=loginpage.verifyHomePageNotNavigated();
         assertTrue(isHomepagedisplayed,"User is able to login even if we are giving wrong Username");
 	}
-	@Test
+	@Test(description="This is for verifying loginpage with valid username and invalid password",groups= {"Regression"},retryAnalyzer=retry.Retry.class)
 	public void verifyUserisUnableToLoginWithValidUserNameAndInvalidpassword()
 	{
 		String expectedUsername=XlUtility.getString(1, 0, "LoginPage");

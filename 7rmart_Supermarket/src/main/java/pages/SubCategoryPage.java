@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.FileUtility;
 import utilities.PageUtility;
+import utilities.WaitUtility;
 
 public class SubCategoryPage {
 public WebDriver driver ;//can acces in multiple action methods //driver is class variable 
@@ -49,6 +50,12 @@ public WebDriver driver ;//can acces in multiple action methods //driver is clas
 	{
 		PageUtility pageutility=new PageUtility();
 		pageutility.pageScrollDown((JavascriptExecutor) driver,pixels);
+		return this;
+	}
+	public SubCategoryPage updateButtonclickableWait()
+	{
+		WaitUtility waitutility=new WaitUtility();
+		waitutility.clickbleWait(driver,update);
 		return this;
 	}
 	public SubCategoryPage clickOnUpdate()

@@ -12,31 +12,32 @@ import org.testng.annotations.Test;
 
 import pages.LoginPage;
 import pages.SubCategoryPage;
+import utilities.ConstantsFile;
+import utilities.XlUtility;
 
 public class SubCategoryTest extends Base {
 	
-	@Test
+	@Test(description="This is to check the file upload functionality",groups= {"Regression"},retryAnalyzer=retry.Retry.class)
 	public void verifyUsernavigateToSubCategoryMoreInfoToFileUpload() throws AWTException
 	{
-		String expectedUsername="admin";
-		String passwordSendkeys="admin";
-		String filePathImage="C:\\Users\\arsha\\OneDrive\\Pictures\\vegetables.png";
+		String expectedUsername=XlUtility.getString(1, 0, "LoginPage");
+		String passwordSendkeys=XlUtility.getString(1, 1, "LoginPage");
+		String filePathImage=ConstantsFile.IMAGEFILE;
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUsernameOnUsernameField(expectedUsername).enterPasswordOnPasswordField(passwordSendkeys).clickOnSignButton();
 		SubCategoryPage subcategorypage=new SubCategoryPage(driver);
-		subcategorypage.clickOnMoreInfoButton().clickOnEditAction().fileUpload(filePathImage).clickOnUpdate();
- 		 boolean fileIsUpLoaded=subcategorypage.verifyFileIsUploadedOrNot();
- 		 assertTrue(fileIsUpLoaded,"File is not uploaded");	
+		subcategorypage.clickOnMoreInfoButton().clickOnEditAction().fileUpload(filePathImage).clickOnUpdate().updateButtonclickableWait();
+ 		boolean fileIsUpLoaded=subcategorypage.verifyFileIsUploadedOrNot();
+ 		assertTrue(fileIsUpLoaded,"File is not uploaded");	
  		}
-	@Test
+	@Test(description="This is for scroll subcategory page")
 	public void scrollSubCategoryPage()
 	{
-		String expectedUsername="admin";
-		String passwordSendkeys="admin";
+		String expectedUsername=XlUtility.getString(1, 0, "LoginPage");
+		String passwordSendkeys=XlUtility.getString(1, 1, "LoginPage");
 		int pixels=250;
 		LoginPage loginpage=new LoginPage(driver);
 		loginpage.enterUsernameOnUsernameField(expectedUsername).enterPasswordOnPasswordField(passwordSendkeys).clickOnSignButton();
-
 		SubCategoryPage subcategorypage=new SubCategoryPage(driver);
 		subcategorypage.clickOnMoreInfoButton().scrollDownAdminUserSearchPage(pixels);
 		

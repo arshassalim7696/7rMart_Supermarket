@@ -27,12 +27,12 @@ public class PageUtility {
 	 public void pageScrollDown(JavascriptExecutor driver,int pixels)
 	 {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0," + pixels + ")", " ");//scroll down 
+		js.executeScript("window.scrollBy(0," + pixels + ")", " ");
 	 }
 	 public void pageScrollUp(JavascriptExecutor driver,int pixels)
 	 {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,-" + pixels + ")", " ");//scroll up
+		js.executeScript("window.scrollBy(0,-" + pixels + ")", " ");
 		
 	 }
 	 public void dragAndDropElements(WebDriver driver, WebElement sourceElement, WebElement targetElement)
